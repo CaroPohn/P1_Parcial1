@@ -11,5 +11,5 @@ Weapon::Weapon(string name, WeaponType weaponType, float attack, float critRate,
 
 float Weapon::getDamage(AttackType attackType, float critRateReduction, bool isCritic)
 {
-
+	return 0.0f;
 }

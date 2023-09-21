@@ -14,7 +14,7 @@ enum AttackType
 {
 	Fast,
 	Normal,
-	Heavy
+	Charged
 };
 
 class Weapon
