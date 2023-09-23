@@ -1,5 +1,13 @@
 #include "Armor.h"
 
+Armor::Armor()
+{
+    name = " ";
+    armorType = {};
+    defense = 0.0f;
+    weight = 0.0f;
+}
+
 Armor::Armor(string name, ArmorType armorType, float defense, float weight)
 {
     this->name = name;

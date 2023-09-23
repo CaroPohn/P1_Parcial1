@@ -19,6 +19,7 @@ private:
 	float weight;
 
 public:
+	Armor();
 	Armor(string name, ArmorType armorType, float defense, float weight);
 	float getDmgReductionPerc(float damage);
 	float getCritRateReduction();
