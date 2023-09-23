@@ -15,6 +15,7 @@ private:
 	float currentHealth;
 
 public:
+	Warrior();
 	Warrior(string name, float maxHealth);
 	void SetWeapon(Weapon weapon);
 	void SetArmor(Armor armor);

@@ -1,22 +1,30 @@
 #include "Warrior.h"
 
+Warrior::Warrior()
+{
+
+}
+
 Warrior::Warrior(string name, float maxHealth)
 {
     this->name = name;
     this->maxHealth = maxHealth;
+    currentHealth = maxHealth;
 }
 
 void Warrior::SetWeapon(Weapon weapon)
 {
+    this->weapon = weapon;
 }
 
 void Warrior::SetArmor(Armor armor)
 {
+    this->armor = armor;
 }
 
 string Warrior::GetName()
 {
-    return string();
+    return name;
 }
 
 float Warrior::ReceiveDamage(float damage)
@@ -31,7 +39,7 @@ float Warrior::Attack(Warrior warrior, AttackType attackType, bool isCrit)
 
 float Warrior::GetCurrentHealth()
 {
-    return 0.0f;
+    return currentHealth;
 }
 
 float Warrior::IsAlive()
