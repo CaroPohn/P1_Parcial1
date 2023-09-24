@@ -16,6 +16,11 @@ Armor::Armor(string name, ArmorType armorType, float defense, float weight)
     this->weight = weight;
 }
 
+Armor::~Armor()
+{
+
+}
+
 float Armor::getDmgReductionPerc(float damage)
 {
 

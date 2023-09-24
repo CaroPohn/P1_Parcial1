@@ -15,13 +15,14 @@ private:
 	float currentHealth;
 
 public:
-	Warrior();
 	Warrior(string name, float maxHealth);
+	~Warrior();
+
 	void SetWeapon(Weapon weapon);
 	void SetArmor(Armor armor);
 	string GetName();
 	float ReceiveDamage(float damage);
 	float Attack(Warrior warrior, AttackType attackType, bool isCrit);
 	float GetCurrentHealth();
-	float IsAlive();
+	bool IsAlive();
 };

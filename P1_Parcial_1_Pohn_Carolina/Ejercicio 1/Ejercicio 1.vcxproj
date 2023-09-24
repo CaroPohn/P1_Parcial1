@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>

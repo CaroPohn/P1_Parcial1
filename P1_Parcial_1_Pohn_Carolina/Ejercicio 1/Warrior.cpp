@@ -1,15 +1,15 @@
 #include "Warrior.h"
 
-Warrior::Warrior()
-{
-
-}
-
 Warrior::Warrior(string name, float maxHealth)
 {
     this->name = name;
     this->maxHealth = maxHealth;
     currentHealth = maxHealth;
+}
+
+Warrior::~Warrior()
+{
+
 }
 
 void Warrior::SetWeapon(Weapon weapon)
@@ -42,7 +42,12 @@ float Warrior::GetCurrentHealth()
     return currentHealth;
 }
 
-float Warrior::IsAlive()
+bool Warrior::IsAlive()
 {
-    return 0.0f;
+    float actualHealth = GetCurrentHealth();
+
+    if (actualHealth <= 0)
+        return false;
+    else
+        return true;
 }

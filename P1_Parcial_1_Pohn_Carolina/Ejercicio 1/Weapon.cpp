@@ -9,6 +9,11 @@ Weapon::Weapon()
 	critDamage = 0.0f;
 }
 
+Weapon::~Weapon()
+{
+
+}
+
 Weapon::Weapon(string name, WeaponType weaponType, float attack, float critRate, float critDamage)
 {
 	this->name = name;
