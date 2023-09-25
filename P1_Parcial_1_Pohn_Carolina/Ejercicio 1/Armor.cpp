@@ -23,12 +23,48 @@ Armor::~Armor()
 
 float Armor::getDmgReductionPerc(float damage)
 {
+    switch (armorType)
+    {
+    case ArmorType::Light:
+    {
+        return 0.10f;
+        break;
+    }
 
-    return 0.0f;
+    case ArmorType::Medium:
+    {
+        return 0.20f;
+        break;
+    }
+
+    case ArmorType::Heavy:
+    {
+        return 0.30f;
+        break;
+    }
+    }
 }
 
 float Armor::getCritRateReduction()
 {
+    switch (armorType)
+    {
+    case ArmorType::Light:
+    {
+        return 0.10f;
+        break;
+    }
 
-    return 0.0f;
+    case ArmorType::Medium:
+    {
+        return 0.15f;
+        break;
+    }
+
+    case ArmorType::Heavy:
+    {
+        return 0.20f;
+        break;
+    }
+    }
 }

@@ -12,12 +12,12 @@ Warrior::~Warrior()
 
 }
 
-void Warrior::SetWeapon(Weapon weapon)
+void Warrior::SetWeapon(Weapon* weapon)
 {
     this->weapon = weapon;
 }
 
-void Warrior::SetArmor(Armor armor)
+void Warrior::SetArmor(Armor* armor)
 {
     this->armor = armor;
 }
@@ -27,14 +27,15 @@ string Warrior::GetName()
     return name;
 }
 
-float Warrior::ReceiveDamage(float damage)
+void Warrior::ReceiveDamage(float damage)
 {
-    return 0.0f;
+    currentHealth -= damage;
 }
 
-float Warrior::Attack(Warrior warrior, AttackType attackType, bool isCrit)
+void Warrior::Attack(Warrior& warrior, AttackType attackType, bool isCrit)
 {
-    return 0.0f;
+    float critRateReduction = warrior.armor->getCritRateReduction();
+    warrior.ReceiveDamage(weapon->getDamage(attackType, critRateReduction, isCrit));
 }
 
 float Warrior::GetCurrentHealth()
