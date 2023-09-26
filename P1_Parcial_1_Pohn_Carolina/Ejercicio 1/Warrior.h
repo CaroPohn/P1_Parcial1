@@ -21,8 +21,9 @@ public:
 	void SetWeapon(Weapon* weapon);
 	void SetArmor(Armor* armor);
 	string GetName();
-	void ReceiveDamage(float damage);
+	float ReceiveDamage(float damage);
 	void Attack(Warrior& warrior, AttackType attackType, bool isCrit);
 	float GetCurrentHealth();
 	bool IsAlive();
+	float getCritRate();
 };

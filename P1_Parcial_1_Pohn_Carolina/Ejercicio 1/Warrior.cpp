@@ -27,15 +27,20 @@ string Warrior::GetName()
     return name;
 }
 
-void Warrior::ReceiveDamage(float damage)
+float Warrior::ReceiveDamage(float damage)
 {
     currentHealth -= damage;
+    //cout << currentHealth << " currentHealt" << endl;
+    //cout << damage << " damage" << endl;
+    return currentHealth;
 }
 
 void Warrior::Attack(Warrior& warrior, AttackType attackType, bool isCrit)
 {
     float critRateReduction = warrior.armor->getCritRateReduction();
     warrior.ReceiveDamage(weapon->getDamage(attackType, critRateReduction, isCrit));
+    cout << weapon->getDamage(attackType, critRateReduction, isCrit) << " esto llega a func attack" << endl;
+    cout << warrior.GetCurrentHealth() << "ajsfhlasjhdfiausjhfiasujdhflkajsdhflaksjdhfailusfhalksjdfhalsidfhalsdjfhaldif" << endl;
 }
 
 float Warrior::GetCurrentHealth()
@@ -51,4 +56,9 @@ bool Warrior::IsAlive()
         return false;
     else
         return true;
+}
+
+float Warrior::getCritRate()
+{
+    return weapon->getWeaponCritRate();
 }

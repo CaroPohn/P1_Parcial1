@@ -33,7 +33,7 @@ float Weapon::getDamage(AttackType attackType, float critRateReduction, bool isC
 	{
 		if (isCritic)
 		{
-			return attack + (critDamage - extraDamage) / critRateReduction;
+			return attack + (critDamage - extraDamage);
 		}
 		else
 			return attack;
@@ -43,7 +43,7 @@ float Weapon::getDamage(AttackType attackType, float critRateReduction, bool isC
 	{
 		if (isCritic)
 		{
-			return attack + critDamage / critRateReduction;
+			return attack + critDamage;
 		}
 		else
 			return attack;
@@ -53,10 +53,19 @@ float Weapon::getDamage(AttackType attackType, float critRateReduction, bool isC
 	{
 		if (isCritic)
 		{
-			return attack + (critDamage + extraDamage) / critRateReduction;
+			cout << attack << "a" << endl;
+			return attack + (critDamage + extraDamage);
 		}
 		else
+		{
+			cout << attack << "este" << endl;
 			return attack;
+		}
 	}
 	}
+}
+
+float Weapon::getWeaponCritRate()
+{
+	return critRate;
 }

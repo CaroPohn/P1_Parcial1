@@ -11,7 +11,9 @@ private:
 	Armor* armor;
 
 public:
-	CharacterCreator(Warrior* warrior, Weapon* weapon, Armor* armor);
+	CharacterCreator();
 	~CharacterCreator();
+
+	Warrior GetWarrior();
 };
 

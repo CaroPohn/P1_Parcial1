@@ -27,6 +27,9 @@
     <ClInclude Include="CharacterCreator.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="GameLoop.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Weapon.cpp">
@@ -42,6 +45,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="CharacterCreator.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoop.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

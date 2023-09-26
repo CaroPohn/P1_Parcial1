@@ -32,4 +32,5 @@ public:
 
 	Weapon(string name, WeaponType weaponType, float attack, float critRate, float critDamage);
 	float getDamage(AttackType attackType, float critRateReduction, bool isCritic);
+	float getWeaponCritRate();
 };

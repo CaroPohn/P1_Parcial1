@@ -1,11 +1,7 @@
 #include "CharacterCreator.h"
 
-CharacterCreator::CharacterCreator(Warrior* warrior, Weapon* weapon, Armor* armor)
+CharacterCreator::CharacterCreator()
 {
-	this->warrior = warrior;
-	this->weapon = weapon;
-	this->armor = armor;
-
 	string weaponName = " ";
 	WeaponType weaponType = WeaponType::Sword;
 	float attack = 0.0f;
@@ -117,9 +113,21 @@ CharacterCreator::CharacterCreator(Warrior* warrior, Weapon* weapon, Armor* armo
 	}
 
 	armor = new Armor(armorName, armorType, defense, weight);
+
+	warrior->SetWeapon(weapon);
+	warrior->SetArmor(armor);
 }
 
 CharacterCreator::~CharacterCreator()
 {
+	delete warrior;
+	delete weapon;
+	delete armor;
 
+	cout << "A warrior was destroyed and all !" << endl;
+}
+
+Warrior CharacterCreator::GetWarrior()
+{
+	return *warrior;
 }

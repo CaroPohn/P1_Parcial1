@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClInclude Include="Armor.h" />
     <ClInclude Include="CharacterCreator.h" />
+    <ClInclude Include="GameLoop.h" />
     <ClInclude Include="Warrior.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Armor.cpp" />
     <ClCompile Include="CharacterCreator.cpp" />
+    <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="Weapon.cpp" />
